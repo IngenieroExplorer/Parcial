@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body class="bg-light text-dark d-flex flex-column justify-content-start">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary text-white px-5 py-3">
+        <a class="navbar-brand text-white" href="#">Parcial #2 App backend y frontend</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#" id="btnCerrarSesion">Cerrar Sesión</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5 pt-5">
+        <div class="d-flex justify-content-between mb-4">
+            <h2>Mis Productos</h2>
+        </div>
+
+        <div class="d-flex justify-content-between gap-5">
+            <div class="card p-3 mb-4 bg-white shadow">
+                <h4 id="tituloFormulario" class="text-center mb-3">Nuevo Producto</h4>
+                <form id="formularioProducto" class="d-flex flex-column gap-2 w-full">
+                    <input type="hidden" id="productoId">
+                    <div class="d-flex gap-4">
+                        <div class="w-full">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control w-full" id="nombre" required>
+                        </div>
+                        <div class="w-full">
+                            <label for="descripcion" class="form-label">Descripción</label>
+                            <input type="text" class="form-control w-full" id="descripcion">
+                        </div>
+                    </div>
+                    <div class="d-flex gap-4">
+                        <div class="w-full">
+                            <label for="precio" class="form-label">Precio</label>
+                            <input type="number" class="form-control w-full" id="precio" step="0.01" required>
+                        </div>
+                        <div class="w-full">
+                            <label for="cantidad" class="form-label">Cantidad</label>
+                            <input type="number" class="form-control w-full" id="cantidad" required>
+                        </div>
+                    </div>
+                    <div class="col-md-3 w-full mt-3 d-flex align-items-end">
+                        <button id="btnGuardar" class="btn btn-primary w-100">Guardar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="card p-3 mb-4 bg-white shadow">
+                <h4 class="text-center mb-3">Actualizar Producto</h4>
+                <form id="formularioProductoUpdate" class="d-flex flex-column gap-2 w-full">
+                    <input type="hidden" id="productoIdUpdate">
+                    <div class="d-flex gap-4">
+                        <div class="w-full">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control w-full" id="nombreUpdate" required>
+                        </div>
+                        <div class="w-full">
+                            <label for="descripcion" class="form-label">Descripción</label>
+                            <input type="text" class="form-control w-full" id="descripcionUpdate">
+                        </div>
+                    </div>
+                    <div class="d-flex gap-4">
+                        <div class="w-full">
+                            <label for="precio" class="form-label">Precio</label>
+                            <input type="number" class="form-control w-full" id="precioUpdate" step="0.01" required>
+                        </div>
+                        <div class="w-full">
+                            <label for="cantidad" class="form-label">Cantidad</label>
+                            <input type="number" class="form-control w-full" id="cantidadUpdate" required>
+                        </div>
+                    </div>
+                    <div class="col-md-3 w-full mt-3 d-flex align-items-end">
+                        <button disabled={true} id="btnActualizar" class="btn btn-primary w-100">Actualizar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        
+        <hr>
+        <h2 class="pt-4 pb-3">Lista De Productos</h2>
+        <div id="mensaje" class="mb-3"></div>
+        <div id="contenedorProductos" class="d-flex flex-wrap gap-3 justify-content-start pb-5">
+            <p class="text-center w-100">Cargando...</p>
+        </div>
+    </div>
+
+    <script src="js/productos.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+body {
+    background-color: #f0f8ff;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.contenedor-login {
+    width: 100%;
+    max-width: 400px;
+}
+
+.card {
+    width: 100%;
+    height: max-content;
+}
+
+.card input {
+    width: 100%;
+}
+
+.card-header {
+    background-color: #007bff;
+    color: white;
+    border-bottom: 1px solid #0056b3;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    padding: 15px;
+}
+
+.form-control {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    border: 1px solid #007bff;
+}
+
+.form-control:focus {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #0056b3;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004494;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
